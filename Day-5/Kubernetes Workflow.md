@@ -1,5 +1,6 @@
 ![alt text](image.png)
 
+
 - Main components:
 
     1. Pod
