@@ -7,3 +7,4 @@
 ## A Simple Docker WorkFlow
 
 ## Docker Architecture
+![alt text](<docker architecture.png>)
