@@ -5,6 +5,6 @@
 ## Containers V/S Virtual Machines
 
 ## A Simple Docker WorkFlow
-
+![alt text](<docker workflow.png>)
 ## Docker Architecture
 ![alt text](<docker architecture.png>)
