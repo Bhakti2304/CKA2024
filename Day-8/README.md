@@ -1,4 +1,4 @@
-- Kubernetes Deployment, Replication Controller and ReplicaSet
+# Kubernetes Deployment, Replication Controller and ReplicaSet
 
 Each pod have one container. We can create Pod in 2 methods:
     1. Imperative
