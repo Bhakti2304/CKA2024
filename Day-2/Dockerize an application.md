@@ -10,3 +10,11 @@ docker images   # List local images
 docker rmi <image_name>     # Delete an Image
 
 docker image prune    # Remove all unused images
+
+docker login -u <username>   # Login into Docker
+
+docker push <username>/<image_name>   # Publish an image to Docker Hub
+
+docker search <image_name>   # Search Hub for an image
+
+docker pull <image_name>   # Pull an image from a Docker Hub
