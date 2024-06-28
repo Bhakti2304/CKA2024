@@ -5,7 +5,7 @@
 Docker Desktop is available for Mac, Linux and Windows
 https://docs.docker.com/desktop
 
-## IMAGES
+### IMAGES
 docker --version          **Verify Docker Installation**
 docker info
 
@@ -19,7 +19,7 @@ docker rmi <image_name>           **Delete an Image**
 
 docker image prune          **Remove all unused images**
 
-## DOCKER HUB
+### DOCKER HUB
 
 docker login -u <username>         **Login into Docker**
 
@@ -35,7 +35,7 @@ docker --help          **Get help with Docker**
 
 docker info         **Display system-wide information**
 
-## CONTAINERS
+### CONTAINERS
 
 docker run --name <container_name> <image_name>        **Create and run a container from an image, with a custom name**
 
