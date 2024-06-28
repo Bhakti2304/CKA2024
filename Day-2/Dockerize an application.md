@@ -24,3 +24,25 @@ docker -d           # Start the docker daemon
 docker --help         # Get help with Docker
 
 docker info        # Display system-wide information
+
+docker run --name <container_name> <image_name>       # Create and run a container from an image, with a custom name
+
+docker run -p <host_port>:<container_port> <image_name>        # Run a container with and publish a container’s port to the host
+
+docker run -d <image_name>         # Run a container in the background
+
+docker start|stop <container_name> (or <container-id>)           # Start or stop an existing container
+
+docker rm <container_name>         # Remove a stopped container
+
+docker exec -it <container_name> sh         # Open a shell inside a running container
+
+docker logs -f <container_name>         # Fetch the logs of a container
+
+docker inspect <container_name> (or <container_id>)           # To inspect a running container
+
+docker ps            # To list currently running containers
+
+docker ps --all          #  List all docker containers (running and stopped)
+
+docker container stats        # View resource usage stats
