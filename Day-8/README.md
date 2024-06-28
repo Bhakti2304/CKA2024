@@ -1,6 +1,6 @@
 # Kubernetes Deployment, Replication Controller and ReplicaSet
 
-Each pod have one container. We can create Pod in 2 methods:
+Each Pod has one container. We can create Pod in 2 methods:
     1. Imperative
     2. Declarative
 
@@ -8,7 +8,7 @@ Each pod have one container. We can create Pod in 2 methods:
 
                  kubectl run nginx
 
-    2. You create a configuration file , which could be JSON or YAML format. YAML highly use in Kubernetes.
+    2. You create a configuration file, which could be JSON or YAML format. YAML highly use in Kubernetes.
     In that config. File you define desired status of object. 
     
    - Imperative use to troubleshoot or for local production.
