@@ -22,13 +22,13 @@ Open the Dockerfile in a text editor and add the following content:
 
 - dockerfile
 
-# Use an official Node.js runtime as the base image
+### Use an official Node.js runtime as the base image
 FROM node:14
 
-# Set the working directory
+### Set the working directory
 WORKDIR /usr/src/app
 
-# Copy package.json and package-lock.json to the working directory
+### Copy package.json and package-lock.json to the working directory
 COPY package*.json ./
 
 # Install dependencies
