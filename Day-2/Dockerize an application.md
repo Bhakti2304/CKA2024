@@ -18,3 +18,9 @@ docker push <username>/<image_name>   # Publish an image to Docker Hub
 docker search <image_name>   # Search Hub for an image
 
 docker pull <image_name>   # Pull an image from a Docker Hub
+
+docker -d   # Start the docker daemon
+
+docker --help   # Get help with Docker
+
+docker info  #  Display system-wide information
