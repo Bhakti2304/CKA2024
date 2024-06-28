@@ -1,6 +1,6 @@
 # Multi Stage Docker Build
 
-## Verify Installation
+## Step 1: Verify Installation
 
 docker --version
 docker info
