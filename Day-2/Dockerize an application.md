@@ -1,5 +1,10 @@
 # Docker installation and Cheatsheet
 
+- Docker provides the ability to package and run an application in a loosely isolated environment called a 'container'.
+
+Docker Desktop is available for Mac, Linux and Windows
+https://docs.docker.com/desktop
+
 docker --version          **Verify Docker Installation**
 docker info
 
