@@ -14,53 +14,43 @@ cd node-js-sample
 ## Step 3: Creating a Dockerfile
 A Dockerfile is a text document that contains instructions to build a Docker image.
 
-Create Dockerfile
 
-touch Dockerfile
+
+touch Dockerfile      **Create Dockerfile**
 Edit Dockerfile
 Open the Dockerfile in a text editor and add the following content:
 
 - dockerfile
 
-### Use an official Node.js runtime as the base image
-FROM node:14
+FROM node:14    **Use an official Node.js runtime as the base image**
 
-### Set the working directory
-WORKDIR /usr/src/app
+WORKDIR /usr/src/app    **Set the working directory**
 
-### Copy package.json and package-lock.json to the working directory
-COPY package*.json ./
+COPY package*.json ./      **Copy package.json and package-lock.json to the working directory**
 
-# Install dependencies
-RUN npm install
+RUN npm install      **Install dependencies**
 
-# Copy the rest of the application code to the working directory
-COPY . .
+COPY . .    **Copy the rest of the application code to the working directory**
 
-# Expose the port on which the app runs
-EXPOSE 3000
+EXPOSE 3000    **Expose the port on which the app runs**
 
-# Command to run the application
-CMD ["npm", "start"]
+CMD ["npm", "start"]    **Command to run the application**
 
 ## Step 4: Building the Docker Image
-Build Docker Image
 
-docker build -t node-js-sample .
+docker build -t node-js-sample .      **Build Docker Image**
 
-# -t node-js-sample: Tags the image with the name "node-js-sample".
-# .: Refers to the current directory where the Dockerfile is located.
+**-t node-js-sample: Tags the image with the name "node-js-sample"**
+**.: Refers to the current directory where the Dockerfile is located**
 
-Verify Image Creation
-
-docker images
+docker images      **Verify Image Creation**
 
 ## Step 5: Running the Docker Container
 Run Docker Container
 
 docker run -d -p 3000:3000 node-js-sample
-# -d: Runs the container in detached mode.
-# -p 3000:3000: Maps port 3000 of the host to port 3000 of the container.
+**-d: Runs the container in detached mode**
+**-p 3000:3000: Maps port 3000 of the host to port 3000 of the container.**
 
 Access Application
 Open a web browser and go to http://localhost:3000 to see the running application.
@@ -70,7 +60,7 @@ Multistage builds allow you to use multiple FROM statements in your Dockerfile, 
 
 - dockerfile
 
-# Stage 1: Build
+**Stage 1: Build**
 FROM node:14 as build
 WORKDIR /usr/src/app
 COPY package*.json ./
@@ -78,7 +68,7 @@ RUN npm install
 COPY . .
 RUN npm run build
 
-# Stage 2: Production
+**Stage 2: Production**
 FROM node:14
 WORKDIR /usr/src/app
 COPY --from=build /usr/src/app ./
