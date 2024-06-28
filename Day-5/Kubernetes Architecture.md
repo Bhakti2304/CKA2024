@@ -20,7 +20,7 @@
   
 - Control Plane or Master node give instructions to Kubernetes.
 
-- Pod - nginx container encapsulated in the pod. One container per pod minimum. It is smallest object in Kubernetes.
+- **Pod** - nginx container encapsulated in the pod. One container per pod minimum. It is smallest object in Kubernetes.
 
 - These 3 are components of **Master Node**. In High availability there are more nodes available in Master Node.
 1. Api Server
@@ -53,12 +53,12 @@ It handle TCP, UDP, SCTP traffic, forwarding requests to the appropriate Pods wi
 
 ## End-to-End of *kubectl* Command
 
-kubectl: Sends a request to the API server.
-API Server: Validates the request and updates the state in etcd.
-Controller Manager: Detects changes and ensures the desired state.
-Scheduler: Assigns pods to nodes.
-Kubelet: Runs containers on the assigned node.
-Kube Proxy: Updates network rules to manage communication.
+- kubectl: Sends a request to the API server.
+- API Server: Validates the request and updates the state in etcd.
+- Controller Manager: Detects changes and ensures the desired state.
+- Scheduler: Assigns pods to nodes.
+- Kubelet: Runs containers on the assigned node.
+- Kube Proxy: Updates network rules to manage communication.
 
 - User uses kubectl client and made a request to API Server. API Server receives the request and first authenticate the request, then validate the request. Lets suppose this request is to create a pod. 
 Kubectl create pod command sent to API Server.
