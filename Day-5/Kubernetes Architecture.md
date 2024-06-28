@@ -34,37 +34,37 @@
 
 - **Controller Manager** is combination of node controller, namespace controller, deployment controller. Controller manager make sure every object is up and running well by continuous monitoring. Ensure the desired state of your applications
 
-- **ETCD** is key-value datastore.
-RDBS database in form of rows and columns. RDBMS has fixed Schema.
-Key-value datastore has no Schema and it store your data in document form (Json type format).
+- **ETCD** is a key-value datastore.
+RDBS database in the form of rows and columns. RDBMS has a fixed Schema.
+Key-value datastore has no Schema and stores your data in document form (JSON type format).
 
-- Only Api Server interact with ETCD and it has authority to apply those changes in ETCD  database.
-If we want to retrieve data from ETCD that also done by only API Server.
+- Only **Api Server** interacts with **ETCD** and it has the authority to apply those changes in the **ETCD**  database.
+If we want to retrieve data from **ETCD** that is also done by only **API Server**.
 
 - **Worker Node** has 2 Components:
  1. Kube-Proxy
 2. Kubelet
 
-- **Kubelet** receives instructions from Master Node. Basically the kubelet is an agent that runs on each worker node.  
-API Server send instructions to Kubelet to make some changes to the container running inside the pod.
-Also notify to API Server. The kubelet communicates with the control plane, receiving instructions and reporting back the status of the node and its workloads. 
+- **Kubelet** receives instructions from Master Node. Basically, the **kubelet** is an agent that runs on each worker node.  
+**API Server** sends instructions to **Kubelet** to make some changes to the container running inside the pod.
+Also, notify to **API Server**. The **Kubelet** communicates with the **Control plane**, receiving instructions and reporting back the status of the **Node** and its workloads. 
 
-- **Kube-Proxy** enables networking withing Nodes. It allowing communication between the Pod by creating IP-Adresses rules.
-It handle TCP, UDP, SCTP traffic, forwarding requests to the appropriate Pods within the cluster.
+- **Kube-Proxy** enables networking within Nodes. It allows communication between the **Pods** by creating IP address rules.
+It handles TCP, UDP, and SCTP traffic, forwarding requests to the appropriate **Pods** within the cluster.
 
 ## End-to-End of *kubectl* Command
 
-- kubectl: Sends a request to the API server.
-- API Server: Validates the request and updates the state in etcd.
-- Controller Manager: Detects changes and ensures the desired state.
-- Scheduler: Assigns pods to nodes.
-- Kubelet: Runs containers on the assigned node.
-- Kube Proxy: Updates network rules to manage communication.
+- **kubectl**: Sends a request to the **API server**.
+- **API Server**: Validates the request and updates the state in **etcd**.
+- **Controller Manager**: Detects changes and ensures the desired state.
+- **Scheduler**: Assigns **Pods** to **Nodes**.
+- **Kubelet**: Runs containers on the assigned **Node**.
+- **Kube Proxy**: Updates network rules to manage communication.
 
-- User uses kubectl client and made a request to API Server. API Server receives the request and first authenticate the request, then validate the request. Lets suppose this request is to create a pod. 
-Kubectl create pod command sent to API Server.
+- User uses **kubectl** client and made a request to **API Server**. **API Server** receives the request and first authenticates the request, then validates the request. Let's suppose this request is to create a **Pod**. 
+**Kubectl** creates **Pod** command sent to **API Server**.
 
-- The request further sent to ETCD and create an entry into database. After creating a pod ETCD sent notification to API Server about confirming about created entry. Scheduler running all the time. It find a pod and make a request to API Server that node has founded. Still pod has not been created.
-API Server interact with Kubelet and sent request. Receiving a request Kubelet create a node in pod and sent notification back to API Server about created node. The entry again added into ETCD. At the end User will get the information about created node. 
+- The request further sent to ETCD and create an entry into the database. After creating a **Pod** **ETCD** sent a notification to **API Server** about confirming about created entry. **Scheduler** running all the time. It finds a **Pod** and make a request to **API Server** that **Node** has founded. Still **Pod** has not been created.
+**API Server** interacts with **Kubelet** and sent requests. Receiving a request **Kubelet** create a node in **Pod** and sent notification back to **API Server** about a created **Node**. The entry again added into **ETCD**. At the end, User will get the information about the created **Node**. 
 
-- Authenticate- validate- retrieve- update in - etcd- from Schedular- send to kubelet- response to apiserver- client
+- Authenticate- validate- retrieve- update in - **etcd**- from **Schedular**- send to **kubelet**- response to **apiserver**- client
