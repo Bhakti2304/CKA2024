@@ -5,8 +5,11 @@
 Docker Desktop is available for Mac, Linux and Windows
 https://docs.docker.com/desktop
 
+## IMAGES
 docker --version          **Verify Docker Installation**
 docker info
+
+docker build -t <image_name>       **Build an Image from a Dockerfile**
 
 docker build -t <image_name> . –no-cache        **Build an Image from a Dockerfile without the cache**
 
@@ -15,6 +18,8 @@ docker images         **List local images**
 docker rmi <image_name>           **Delete an Image**
 
 docker image prune          **Remove all unused images**
+
+## DOCKER HUB
 
 docker login -u <username>         **Login into Docker**
 
@@ -29,6 +34,8 @@ docker -d             **Start the docker daemon**
 docker --help          **Get help with Docker**
 
 docker info         **Display system-wide information**
+
+## CONTAINERS
 
 docker run --name <container_name> <image_name>        **Create and run a container from an image, with a custom name**
 
