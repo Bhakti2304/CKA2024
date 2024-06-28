@@ -18,7 +18,7 @@
 
 - In Worker Node actual work is happening.
   
-- Control Plane or Master node give instructions to Kubernetes.
+- Control Plane or Master node gives instructions to Kubernetes.
 
 - **Pod** - nginx container encapsulated in the pod. One container per pod minimum. It is smallest object in Kubernetes.
 - A **Container** is a lightweight, standalone executable package that includes everything needed to run a piece of software. Containers within a pod share resources and can communicate with each other using localhost.
