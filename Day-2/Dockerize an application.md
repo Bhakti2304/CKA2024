@@ -13,7 +13,7 @@ docker image prune          **Remove all unused images**
 
 docker login -u <username>         **Login into Docker**
 
-docker push <username>/<image_name>         **Publish an image to Docker Hu****
+docker push <username>/<image_name>         **Publish an image to Docker Hub**
 
 docker search <image_name>             **Search Hub for an image**
 
@@ -41,8 +41,8 @@ docker logs -f <container_name>          **Fetch the logs of a container**
 
 docker inspect <container_name> (or <container_id>)            **To inspect a running container**
 
-docker ps            # To list currently running containers
+docker ps             **To list currently running containers**
 
-docker ps --all          #  List all docker containers (running and stopped)
+docker ps --all            **List all running and stopped docker containers**
 
-docker container stats        # View resource usage stats
+docker container stats         **View resource usage stats**
