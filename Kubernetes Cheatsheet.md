@@ -91,6 +91,20 @@ kubectl port-forward pod/<pod-name> <local-port>:<pod-port>
 kubectl exec -it <pod-name> -- <command>
 **Execute a command in a pod**
 
+## Configuration Files (Also referred to as Manifest or YAML Files)
+
+kubectl create -f <configuration file>  
+**Create objects**
+
+kubectl create -f <configuration file directory> 
+**Create objects in all manifest files in a directory**
+
+kubectl create -f <‘url’> 
+**Create objects from a URL**
+
+kubectl delete -f <configuration file> 
+**Delete an object**
+
 ## Persistent Volumes and Persistent Volume Claims
 
 kubectl get pv
