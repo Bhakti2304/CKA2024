@@ -3,7 +3,7 @@
 kubectl config current-context
 **View current context**
 
-kubectl config use-context <context-name>
+kubectl config use-context <context_name>
 **Switch context**
 
 kubectl config get-contexts
@@ -14,10 +14,10 @@ kubectl config get-contexts
 kubectl get pods
 **List all pods**
 
-kubectl describe pod <pod-name>
+kubectl describe pods <pod_name>
 **Get pod details**
 
-kubectl delete pod <pod-name>
+kubectl delete pod <pod_name>
 **Delete a pod**
 
 ## Deployments
@@ -25,10 +25,10 @@ kubectl delete pod <pod-name>
 kubectl get deployments
 **List all deployments**
 
-kubectl describe deployment <deployment-name>
+kubectl describe deployment <deployment_name>
 **Get deployment details**
 
-kubectl create deployment <deployment-name> --image=<image-name>
+kubectl create deployment <deployment_name> --image=<image_name>
 **Create a deployment**
 
 kubectl edit deployment <deployment_name>
@@ -37,13 +37,13 @@ kubectl edit deployment <deployment_name>
 kubectl delete deployment <deployment_name>
 **Delete deployments**
 
-kubectl scale deployment <deployment-name> --replicas=<number-of-replicas>
+kubectl scale deployment <deployment_name> --replicas=<number_of_replicas>
 **Scale a deployment**
 
 kubectl rollout status deployment <deployment_name> 
 **See the rollout status of a deployment**
 
-kubectl set image deployment/<deployment-name> <container-name>=<new-image>
+kubectl set image deployment/<deployment_name> <container_name>=<new_image>
 **Update a deployment**
 
 kubectl set image deployment/<deployment_name> <container_name>=image:<new_image_version>
@@ -57,10 +57,10 @@ kubectl rollout undo deployment/<deployment_name>
 kubectl get services
 **List all services:**
 
-kubectl describe service <service-name>
+kubectl describe service <service_name>
 **Get service details**
 
-kubectl expose deployment <deployment-name> --type=<service-type> --port=<port> --target-port=<target-port>
+kubectl expose deployment <deployment_name> --type=<service_type> --port=<port> --target-port=<target_port>
 **Expose a deployment as a service**
 
 ## ConfigMaps and Secrets
@@ -68,13 +68,13 @@ kubectl expose deployment <deployment-name> --type=<service-type> --port=<port> 
 kubectl get configmaps
 **List all configmaps**
 
-kubectl create configmap <configmap-name> --from-literal=<key>=<value>
+kubectl create configmap <configmap_name> --from-literal=<key>=<value>
 **Create a configmap**
 
 kubectl get secrets
 **List all secrets**
 
-kubectl create secret generic <secret-name> --from-literal=<key>=<value>
+kubectl create secret generic <secret_name> --from-literal=<key>=<value>
 **Create a secret**
 
 ## Namespaces
@@ -82,18 +82,18 @@ kubectl create secret generic <secret-name> --from-literal=<key>=<value>
 kubectl get namespaces
 **List all namespaces**
 
-kubectl create namespace <namespace-name>
+kubectl create namespace <namespace_name>
 **Create a namespace**
 
-kubectl delete namespace <namespace-name>
+kubectl delete namespace <namespace_name>
 **Delete a namespace**
 
 ## Logs
 
-kubectl logs <pod-name>
+kubectl logs <pod_name>
 **View logs of a pod**
 
-kubectl logs <pod-name> -c <container-name>
+kubectl logs <pod_name> -c <container_name>
 **View logs of a specific container in a pod**
 
 kubectl logs -f <service_name> [-c <$container>] 
@@ -104,12 +104,12 @@ kubectl logs <pod_name> pod.log
 
 ## Port Forwarding
 
-kubectl port-forward pod/<pod-name> <local-port>:<pod-port>
+kubectl port-forward pod/<pod_name> <local_port>:<pod_port>
 **Forward a local port to a port on a pod**
 
 ## Executing Commands in Pods
 
-kubectl exec -it <pod-name> -- <command>
+kubectl exec -it <pod_name> -- <command>
 **Execute a command in a pod**
 
 ## Configuration Files (Also referred to as Manifest or YAML Files)
