@@ -31,11 +31,23 @@ kubectl describe deployment <deployment-name>
 kubectl create deployment <deployment-name> --image=<image-name>
 **Create a deployment**
 
+kubectl edit deployment <deployment_name>
+**Edit and update the definition of one or more deployments on the server**
+
+kubectl delete deployment <deployment_name>
+**Delete deployments**
+
 kubectl scale deployment <deployment-name> --replicas=<number-of-replicas>
 **Scale a deployment**
 
+kubectl rollout status deployment <deployment_name> 
+**See the rollout status of a deployment**
+
 kubectl set image deployment/<deployment-name> <container-name>=<new-image>
 **Update a deployment**
+
+kubectl set image deployment/<deployment_name> <container_name>=image:<new_image_version>
+**Perform a rolling update (K8S default), set the image of the container to a new version for a particular deployment**
 
 ## Services
 
