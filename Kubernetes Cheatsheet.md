@@ -1,25 +1,25 @@
-**View current context**
 kubectl config current-context
+**View current context**
 
-**Switch context**
 kubectl config use-context <context-name>
+**Switch context**
 
-**View all contexts**
 kubectl config get-contexts
+**View all contexts**
 
-**List all pods**
 kubectl get pods
+**List all pods**
 
-**Get pod details**
 kubectl describe pod <pod-name>
+**Get pod details**
 
-**Delete a pod**
 kubectl delete pod <pod-name>
+**Delete a pod**
 
-**List all deployments**
 kubectl get deployments
+**List all deployments**
 
-**Get deployment details**
 kubectl describe deployment <deployment-name>
+**Get deployment details**
 
 
