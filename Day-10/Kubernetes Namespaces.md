@@ -8,3 +8,5 @@
 
 - Resources resides within namespaces interact with each other through their Hostnames.
 - Resources resides in different namespaces interact with eachother through fully qualified domain name.
+
+![alt text](namespace.png)
