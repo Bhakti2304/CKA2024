@@ -7,6 +7,16 @@
 
 ## Containers V/S Virtual Machines
 ![alt text](image.png)
+
+| Virtualization  | Containerization |
+| ------------- | ------------- |
+|Virtualizes hardware resources  | Virtualizes only OS resources |
+| Requires the complete OS installation for every VM  | 	Installs the container only on a host OS  |
+| A kernel is installed for every virtualized OS | Uses only the kernel of the underlying host OS |
+| Heavyweight | Lightweight |
+| Limited Performance | Native Performance |
+| Fully Isolated | Process-level isolation |
+
 ## A Simple Docker WorkFlow
 ![alt text](<docker workflow.png>)
 ## Docker Architecture
