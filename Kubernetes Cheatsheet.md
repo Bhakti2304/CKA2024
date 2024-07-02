@@ -93,16 +93,16 @@ kubectl exec -it <pod-name> -- <command>
 
 ## Configuration Files (Also referred to as Manifest or YAML Files)
 
-kubectl create -f <configuration file>  
+kubectl create -f <configuration_file>  
 **Create objects**
 
-kubectl create -f <configuration file directory> 
+kubectl create -f <configuration_file_directory> 
 **Create objects in all manifest files in a directory**
 
 kubectl create -f <‘url’> 
 **Create objects from a URL**
 
-kubectl delete -f <configuration file> 
+kubectl delete -f <configuration_file> 
 **Delete an object**
 
 ## Persistent Volumes and Persistent Volume Claims
