@@ -17,8 +17,14 @@ kubectl get pods
 kubectl describe pods <pod_name>
 **Get pod details**
 
+kubectl create pod <pod_name>
+**Create a pod**
+
 kubectl delete pod <pod_name>
 **Delete a pod**
+
+kubectl port-forward <pod name> <port_number_to_listen_on>:<port_number_to_forward_to>
+**Listen on a port on the local machine and forward to a port on a specified pod**
 
 ## Deployments
 
