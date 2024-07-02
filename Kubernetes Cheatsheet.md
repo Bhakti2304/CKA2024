@@ -49,6 +49,9 @@ kubectl set image deployment/<deployment-name> <container-name>=<new-image>
 kubectl set image deployment/<deployment_name> <container_name>=image:<new_image_version>
 **Perform a rolling update (K8S default), set the image of the container to a new version for a particular deployment**
 
+kubectl rollout undo deployment/<deployment_name>
+**Rollback a previous deployment**
+
 ## Services
 
 kubectl get services
@@ -92,6 +95,12 @@ kubectl logs <pod-name>
 
 kubectl logs <pod-name> -c <container-name>
 **View logs of a specific container in a pod**
+
+kubectl logs -f <service_name> [-c <$container>] 
+**Get logs from a service and optionally select which container**
+
+kubectl logs <pod_name> pod.log 
+**Output the logs for a pod into a file named ‘pod.log’**
 
 ## Port Forwarding
 
