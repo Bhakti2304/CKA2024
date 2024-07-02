@@ -60,10 +60,10 @@ kubectl rollout undo deployment/<deployment_name>
 
 ## Services
 
-kubectl get services
-**List all services:**
+kubectl get services/svc
+**List all services**
 
-kubectl describe service <service_name>
+kubectl describe service/svc <service_name>
 **Get service details**
 
 kubectl expose deployment <deployment_name> --type=<service_type> --port=<port> --target-port=<target_port>
