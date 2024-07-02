@@ -23,6 +23,9 @@ kubectl create pod <pod_name>
 kubectl delete pod <pod_name>
 **Delete a pod**
 
+kubectl run<pod_name> —-image=<image_name>
+**launch a pod with a name and an image**
+
 kubectl port-forward <pod name> <port_number_to_listen_on>:<port_number_to_forward_to>
 **Listen on a port on the local machine and forward to a port on a specified pod**
 
@@ -140,14 +143,19 @@ kubectl get rc
 kubectl get rc --namespace=”<namespace_name>” 
 **List the replication controllers by namespace**
 
-kubectl get replicasets
+## Replica Sets
+
+kubectl get replicasets/rs
 **List ReplicaSets**
 
-kubectl describe replicasets <replicaset_name>
+kubectl describe replicasets/rs <replicaset_name>
 **Display the detailed state of one or more ReplicaSets**
 
 kubectl scale --replicas=[x] 
 **Scale a ReplicaSet**
+
+kubectl create -f <rs.yaml>
+**Create a new ReplicaSet using a YAML file**
 
 ## Persistent Volumes and Persistent Volume Claims
 
