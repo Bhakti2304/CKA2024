@@ -132,6 +132,23 @@ kubectl create -f <‘url’>
 kubectl delete -f <configuration_file> 
 **Delete an object**
 
+## Replication Controllers
+
+kubectl get rc
+**List the replication controllers**
+
+kubectl get rc --namespace=”<namespace_name>” 
+**List the replication controllers by namespace**
+
+kubectl get replicasets
+**List ReplicaSets**
+
+kubectl describe replicasets <replicaset_name>
+**Display the detailed state of one or more ReplicaSets**
+
+kubectl scale --replicas=[x] 
+**Scale a ReplicaSet**
+
 ## Persistent Volumes and Persistent Volume Claims
 
 kubectl get pv
