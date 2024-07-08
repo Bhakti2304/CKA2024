@@ -1,7 +1,7 @@
 ## Replicaset
-Create a new Replicaset based on the nginx image with 3 replicas
-Update the replicas to 4 from the YAML
-Update the replicas to 6 from the command line
+- Create a new Replicaset based on the nginx image with 3 replicas
+- Update the replicas to 4 from the YAML
+- Update the replicas to 6 from the command line
 
 
 ## Deployment
