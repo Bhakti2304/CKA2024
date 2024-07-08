@@ -1,3 +1,9 @@
+## Replicaset
+Create a new Replicaset based on the nginx image with 3 replicas
+Update the replicas to 4 from the YAML
+Update the replicas to 6 from the command line
+
+
 ## Deployment
 
 - Create a Deployment named nginx with 3 replicas. The Pods should use the nginx:1.23.0 image and the name nginx. The Deployment uses the label tier=backend. The Pod template should use the label app=v1.
