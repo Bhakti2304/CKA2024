@@ -1,5 +1,7 @@
 ## Multi Container Pod Kubernetes - Sidecar vs Init Container
 
+![image](https://github.com/Bhakti2304/CKA2024/assets/116799960/bb53309b-cc71-4381-b3ef-fa32e624295e)
+
 ![image](https://github.com/Bhakti2304/CKA2024/assets/116799960/13244599-2063-43f1-8d60-1abe3506c570)
 
 ![image](https://github.com/Bhakti2304/CKA2024/assets/116799960/5936e4e0-dce7-4e21-b514-2a1c6f914746)
