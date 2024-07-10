@@ -9,3 +9,16 @@
   docker run -p <host_port>:<container_port> <image_name>
 
   -p shows port mapping
+  
+## Docker file
+
+- The Docker file contains a series of instructions to build a Doker image.
+
+- Key instructions in Dockerfile:
+
+  - FROM: Set the base image
+  - WORKDIR: Set the working directory
+  - COPY: Copies files from the host system to the container
+  - RUN: Execute command in container
+  - CMD: Specify the command to run once the container starts
+  - EXPOSE: Documents which ports the container listens on
