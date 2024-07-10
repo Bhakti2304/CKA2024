@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  labels:
+    run: nginx
+    tier: frontend
+    type: app1
+spec:
+  containers:
+  - image: nginx
+    name: nginx
+  nodeName: cka-cluster2-worker
