@@ -13,3 +13,25 @@ Static Pods are managed directly by the kubelet on a specific node rather than b
 3. **Remove the Scheduler YAML**: To stop the pod, you must remove or modify the corresponding file directly on the node.
 4. **Default location**": is usually `/etc/kubernetes/manifests/`; you can place the pod YAML in the directory, and Kubelet will pick it for scheduling.
 
+## Manual Pod Scheduling
+
+Manual Pod Scheduling in Kubernetes refers to the process of assigning pods to specific nodes without relying on the Kubernetes scheduler.
+
+### Key Points:
+- **`nodeName` Field**: Use this field in the pod specification to specify the node where the pod should run.
+- **No Scheduler Involvement**: When `nodeName` is specified, the scheduler bypasses the pod, and it’s directly assigned to the given node.
+
+### Example Configuration:
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+spec:
+  nodeName: cka-cluster2-worker
+  containers:
+  - name: nginx
+    image: nginx
+```
+
+>Note: Kubernetes will place the pod on cka-cluster2-worker with the above configuration.
