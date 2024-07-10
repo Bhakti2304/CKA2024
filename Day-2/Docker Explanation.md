@@ -59,7 +59,11 @@
 ```docker volume create <volume_name>```
 
 -  mount the volume to the directory inside the container
-```docker run -d -p 3000:3000 -e DATABASE_URL=mongodb://mongo:27017/ts-express-app -v <volume_name>:/data/db ts-express-app```
+```docker run -d -p 3000:3000 -e <env_var_name>=mongodb://mongo:27017/ts-express-app -v <volume_name>:<path_inside_container> <image_name>```
+  - -d: refers to container runs in 'detached mode'
+  - -p: port mapping
+  - -e: sets an environment variable inside the container
+  - -v: refers to mounts a volume from host to container
 - Here, any data written to /app/data inside the container will be stored in the named volume on the host.
 
 - To show your details about the volume, including its location on the host filesystem
