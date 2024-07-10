@@ -1,5 +1,7 @@
 # Multi Stage Docker Build
 
+- Multi-stage builds let you reduce the size of your final image, by creating a cleaner separation between the building of your image and the final output. 
+
 ## Step 1: Verify Installation
 
 docker --version
