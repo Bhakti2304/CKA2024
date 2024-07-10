@@ -23,7 +23,7 @@ docker image prune          **Remove all unused images**
 
 docker login -u <username>         **Login into Docker**
 
-docker push <username>/<image_name>         **Publish an image to Docker Hub**
+docker push <user_name>/<image_name>         **Publish an image to Docker Hub**
 
 docker search <image_name>             **Search Hub for an image**
 
@@ -40,6 +40,7 @@ docker info         **Display system-wide information**
 docker run --name <container_name> <image_name>        **Create and run a container from an image, with a custom name**
 
 docker run -p <host_port>:<container_port> <image_name>         **Run a container with and publish a container’s port to the host**
+-p flag shows port mapping
 
 docker run -d <image_name>          **Run a container in the background**
 
