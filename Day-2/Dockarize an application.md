@@ -61,10 +61,15 @@ docker run -dp 3000:3000 username/new-reponame:tagname
 - To enter(exec) into the container, use the below command
 
 ```
-docker exec -it containername sh
+docker exec -it container_name sh
 or
-docker exec -it containerid sh
+docker exec -it container_id sh
 ```
+
+-it flag refers to the interactive mode which allows you to interact with the container's shell
+
+- This can be useful for debugging, running admin tasks, creating folder/volumes or inspecting the state of the container.
+
 - To view docker logs
 
 ```
