@@ -23,8 +23,10 @@
 - Portability: Applications run the same, regardless of where they are deployed.
 - Scalability: Easily scale applications up or down based on demand.
 - Isolation: Containers encapsulate an application and its dependencies, ensuring that they run independently of each other.
-  
-## A Simple Docker WorkFlow
-![alt text](<docker workflow.png>)
+
 ## Docker Architecture
 ![alt text](<docker architecture.png>)
+
+## A Simple Docker WorkFlow
+![alt text](<docker workflow.png>)
+
