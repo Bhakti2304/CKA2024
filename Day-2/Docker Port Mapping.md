@@ -53,6 +53,8 @@
 -  Using the docker volume create command, we may directly create a volume, or Docker can do it for us when it makes a container or service.
 -  3 main types of volumes: NAmed Volumes, Bind Mounts, tmpfs Mounts
 
+![image](https://github.com/Bhakti2304/CKA2024/assets/116799960/15a4386e-0e65-4730-9373-f7deb0574835)
+
 - create a named volume
 ```docker volume create <volume_name>```
 
