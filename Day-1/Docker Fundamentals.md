@@ -27,6 +27,8 @@
 ## Docker Architecture
 ![alt text](<docker architecture.png>)
 
+- Docker Image: Docker image is a lightweight, standalone, executable package that includes everything needed to run a piece of software, including the code, a runtime, libraries, environment variables, and config files.
+
 ## A Simple Docker WorkFlow
 ![alt text](<docker workflow.png>)
 
