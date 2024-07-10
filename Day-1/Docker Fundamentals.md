@@ -17,6 +17,12 @@
 | Limited Performance | Native Performance |
 | Fully Isolated | Process-level isolation |
 
+## Key Benefits of Docker:
+
+- Portability: Applications run the same, regardless of where they are deployed.
+- Scalability: Easily scale applications up or down based on demand.
+- Isolation: Containers encapsulate an application and its dependencies, ensuring that they run independently of each other.
+  
 ## A Simple Docker WorkFlow
 ![alt text](<docker workflow.png>)
 ## Docker Architecture
