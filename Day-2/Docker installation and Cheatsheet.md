@@ -7,7 +7,7 @@ https://docs.docker.com/desktop
 
 ### IMAGES
 ```docker --version```         **Verify Docker Installation**
-docker info
+```docker info```
 
 ```docker build -t <image_name>```       **Build an Image from a Dockerfile**
 
