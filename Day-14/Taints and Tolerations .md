@@ -15,14 +15,18 @@
 
 Syntax to add Taint to Node:
 
-```k taint node <node_name> <key>=<value>:<effect>
-   k taint node cka-cluster2-worker gpu=true:NoSchedule```
+```bash
+k taint node <node_name> <key>=<value>:<effect>
+k taint node cka-cluster2-worker gpu=true:NoSchedule
+```
 
 - To remove the **Taint** :
-```k taint node cka-cluster2-worker gpu=true:NoSchedule-```
+```bash
+k taint node cka-cluster2-worker gpu=true:NoSchedule-
+```
 
 - To add Toleration to Pod:
-```
+```yaml
 spec:
   containers:
   - image: redis
