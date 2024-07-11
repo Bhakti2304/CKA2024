@@ -38,5 +38,8 @@ spec:
     effect: "NoSchedule" 
 ```
 
-## Taints and Tolerations vs Selectors
+## Taints vs Selectors
+
+Taints work as restrictions applied on Nodes. Nodes make that decision on what type of Pods to accept.
+In NodeSeletors, Pods take the decision on which Nodes it should go. We can not do expression and can not add more condiions.
 
