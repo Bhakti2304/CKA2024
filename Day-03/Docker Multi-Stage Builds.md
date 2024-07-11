@@ -18,7 +18,7 @@ cd node-js-sample
 ## Step 3: Creating a Dockerfile
 A Dockerfile is a text document that contains instructions to build a Docker image.
 
-```
+```bash
 touch Dockerfile    # Create Dockerfile
 Edit Dockerfile
 ```
