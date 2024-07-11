@@ -23,6 +23,8 @@
 - **Pod** - nginx container encapsulated in the pod. One container per pod minimum. It is smallest object in Kubernetes.
 - A **Container** is a lightweight, standalone executable package that includes everything needed to run a piece of software. Containers within a pod share resources and can communicate with each other using localhost.
 
+- A pod is a group of one or more containers and is the smallest deployable unit in Kubernetes.  A node is a representation of a single machine in a cluster (we can simply view these machines as a set of CPU and RAM). A node can be a virtual machine, a physical machine in a data center hosted on a cloud provider like Azure, AWS. 
+
 - These 3 are components of **Master Node**. In High availability there are more nodes available in Master Node.
 1. Api Server
 2. Scheduler
@@ -30,7 +32,7 @@
 
 - **API Server** is center of it. Any request from customer or out side world comes to API Server first, so it will be main entry point of Kubernetes cluster to handling external and internal requests.work
 
-- **Scheduler** is schedule your workload. It receives the request from API Server and then API server forward the request to Scheduler to find the suitable pod. Based on many factors scheduler find the suitable pod. It assigns workloads to specific nodes based on resource availability and other constraints.
+- **Scheduler** is schedule your workload. It receives the request from API Server and then API server forward the request to Scheduler to find the suitable pod. Based on many factors(like Node selector, Taints/Tolerations, Node Affinity, CPU and memory requirements) scheduler find the suitable pod. It assigns workloads to specific nodes based on resource availability and other constraints.
 
 - **Controller Manager** is combination of node controller, namespace controller, deployment controller. Controller manager make sure every object is up and running well by continuous monitoring. Ensure the desired state of your applications
 
@@ -43,9 +45,9 @@ If we want to retrieve data from **ETCD** that is also done by only **API Server
 
 - **Worker Node** has 2 Components:
  1. Kube-Proxy
-2. Kubelet
+ 2. Kubelet
 
-- **Kubelet** receives instructions from Master Node. Basically, the **kubelet** is an agent that runs on each worker node.  
+- **Kubelet** receives instructions from Master Node. Basically, the **kubelet** is an agent that runs on each worker node.  **Kubelet**  make sure that pod is running on the assigned node.
 **API Server** sends instructions to **Kubelet** to make some changes to the container running inside the pod.
 Also, notify to **API Server**. The **Kubelet** communicates with the **Control plane**, receiving instructions and reporting back the status of the **Node** and its workloads. 
 
