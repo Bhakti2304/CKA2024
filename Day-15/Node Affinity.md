@@ -18,6 +18,8 @@
 - Then Scheduler only places the Pod on nodes with matching labels.
 - Once scheduled, the Pod remains on Node even if the label changes.
 
+![image](https://github.com/Bhakti2304/CKA2024/assets/116799960/f646d9d2-89d3-499a-bcc7-a2a3eb8451b3)
+
 Example YAML file:
 ```yaml
 apiVersion: v1
@@ -52,3 +54,4 @@ spec:
   restartPolicy: Always
 status: {}
 ```
+![image](https://github.com/Bhakti2304/CKA2024/assets/116799960/0ea7f6d5-2ffc-47d8-a242-ab609718ddf7)
