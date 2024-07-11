@@ -1,0 +1,7 @@
+kind: Cluster
+apiVersion: v1
+name: cka-cluster
+nodes:
+- role: control-plane
+- role: worker01
+- role: worker02
