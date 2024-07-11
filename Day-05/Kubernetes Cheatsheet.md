@@ -128,9 +128,7 @@
 
 ```kubectl get pods -o yaml```  **Use -o yaml or -o json to output resources in YAML or JSON format**
 
-kubectl apply -f <file>.yaml
-**Use kubectl apply -f <file> to create/update resources defined in a YAML/JSON file**
+```kubectl apply -f <file>.yaml```  **Use kubectl apply -f <file> to create/update resources defined in a YAML/JSON file**
 
-kubectl delete -f <file>.yaml
-**Use kubectl delete -f <file> to delete resources defined in a YAML/JSON file**
+```kubectl delete -f <file>.yaml```  **Use kubectl delete -f <file> to delete resources defined in a YAML/JSON file**
 
