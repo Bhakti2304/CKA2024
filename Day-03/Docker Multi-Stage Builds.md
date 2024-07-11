@@ -17,36 +17,37 @@ cd node-js-sample
 ```
 ## Step 3: Creating a Dockerfile
 A Dockerfile is a text document that contains instructions to build a Docker image.
-```bash
-touch Dockerfile      **Create Dockerfile**
+
+```
+touch Dockerfile    # Create Dockerfile
 Edit Dockerfile
 ```
 Open the Dockerfile in a text editor and add the following content:
 
 - dockerfile
 ```yaml
-FROM node:14    **Use an official Node.js runtime as the base image**
+FROM node:14       # Use an official Node.js runtime as the base image
 
-WORKDIR /usr/src/app    **Set the working directory**
+WORKDIR /usr/src/app    # Set the working directory
 
-COPY package*.json ./      **Copy package.json and package-lock.json to the working directory**
+COPY package*.json ./      # Copy package.json and package-lock.json to the working directory
 
-RUN npm install      **Install dependencies**
+RUN npm install      # Install dependencies
 
-COPY . .    **Copy the rest of the application code to the working directory**
+COPY . .    # Copy the rest of the application code to the working directory
 
-EXPOSE 3000    **Expose the port on which the app runs**
+EXPOSE 3000    # Expose the port on which the app runs
 
-CMD ["npm", "start"]    **Command to run the application**
+CMD ["npm", "start"]    # Command to run the application
 ```
 ## Step 4: Building the Docker Image
 ```bash
-docker build -t node-js-sample .      **Build Docker Image**
+docker build -t node-js-sample .      # Build Docker Image
 ```
 **-t node-js-sample: Tags the image with the name "node-js-sample"**
 **.: Refers to the current directory where the Dockerfile is located**
 ```bash
-docker images      **Verify Image Creation**
+docker images      # Verify Image Creation
 ```
 ## Step 5: Running the Docker Container
 ```bash
