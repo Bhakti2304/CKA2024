@@ -31,7 +31,8 @@ spec:
   - key: "gpu"
     operator: "Equal"
     value: "true"
-    effect: "NoSchedule" ```
+    effect: "NoSchedule" 
+```
 
 # Taints and Tolerations vs Selectors
 
