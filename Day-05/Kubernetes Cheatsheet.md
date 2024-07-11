@@ -1,11 +1,11 @@
 ## kubectl Configurations
 
-kubectl config current-context
-**View current context**
-
+```bash
+kubectl config current-context # View current context
+```
 kubectl config use-context <context_name>
-**Switch context**
 
+**Switch context**
 kubectl config get-contexts
 **View all contexts**
 
