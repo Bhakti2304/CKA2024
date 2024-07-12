@@ -14,11 +14,11 @@ git clone https://github.com/docker/getting-started-app.git
 ```bash
 cd getting-started-app/
 ```
-- Create an empty file with the name Dockerfile
+- Create an empty file with the name **Dockerfile**
 ```bash
 touch Dockerfile
 ```
-- Using the text editor of your choice, paste the below content ( Details about each of these have already shared in the video)
+- Using the text editor of your choice, paste the below content
 ```yaml
 FROM node:18-alpine
 WORKDIR /app
@@ -28,7 +28,7 @@ CMD ["node", "src/index.js"]
 EXPOSE 3000
 ```
 
-- Build the docker image using the application code and Dockerfile
+- Build the **docker image** using the application code and **Dockerfile**
 
 ```bash
 docker build -t day02-todo .
@@ -41,34 +41,31 @@ docker images
 - Create a public repository on hub.docker.com and push the image to remote repo
 ```bash
 docker login
-docker tag day02-todo:latest username/new-reponame:tagname
+docker tag day02-todo: latest username/new-reponame:tagname
 docker images
 docker push username/new-reponame:tagname
 ```
 
-- To pull the image to another environment , you can use below command
+- To pull the image to another environment, you can use the below command
 ```bash
 docker pull username/new-reponame:tagname
 ```
 
-- To start the docker container, use below command
-
+- To start the docker container, use the below command
 ```bash
 docker run -dp 3000:3000 username/new-reponame:tagname
 ```
 
-- Verify your app. If you have followed the above steps correctly, your app should be listening on localhost:3000
+- Verify your app. Your app should be listening on localhost:3000
 - To enter(exec) into the container, use the below command
-
 ```bash
 docker exec -it container_name sh
 or
 docker exec -it container_id sh
 ```
+  -it flag refers to the interactive mode which allows you to interact with the container's shell
 
--it flag refers to the interactive mode which allows you to interact with the container's shell
-
-- This can be useful for debugging, running admin tasks, creating folder/volumes or inspecting the state of the container.
+- This can be useful for debugging, running admin tasks, creating folders/volumes, or inspecting the state of the container.
 
 - To view docker logs
 
