@@ -23,5 +23,10 @@ Example:
 - ```*/5 * * * *```
 
 **Use Cases:**
-- To generate reports at certain times of day
+- To generate reports at certain times of day (daily report, weekly report, monthly report)
 - To do execute Task at regular based such as clean up-job
+
+### Jobs
+
+- It executes once. 
+- Use case: Such as installation script, provisioning cluster, job in automation pipeline,  to create a node or do some operation Job
