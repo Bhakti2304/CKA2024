@@ -6,11 +6,11 @@
 
 - To automate time-based job execution
 ``` * * * * * ```
-- Minute allowed value 0-59
-- Hour allowed value 0-23
-- Day of Month allowed value 1-31
-- Month allowed value 1-12
-- Day of Week allowed value 0-6 (Sunday to Saturday)
+- 1st * shows Minute, allowed value 0-59
+- 2nd * shows Hour, allowed value 0-23
+- 3rd * shows Day of Month, allowed value 1-31
+- 4t * shows Month, allowed value 1-12
+- 5th * shows Day of Week, allowed value 0-6 (Sunday to Saturday)
 
 Example: 
 - For every Saturday
