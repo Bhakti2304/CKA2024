@@ -21,3 +21,7 @@ Example:
 ```45 23 * * 6```
 - For every 5 minutes */n to every nth interval of time
 - ```*/5 * * * *```
+
+**Use Cases:**
+- To generate reports at certain times of day
+- To do execute Task at regular based such as clean up-job
