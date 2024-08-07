@@ -6,6 +6,6 @@
 
 - There are 3 types of Health Probes:
 
-1. Startup - mostly used for slow/legacy applications which take most of the time to startup.
-2. readiness - it ensures your application is ready before it starts serving to the traffic to the user.
-3. liveness - it monitors the apps after a certain period of time and when the application fails or crashes, it restarts the application. 
+1. Startup - Used to check if the application within the pod has started. It is mostly used for slow/legacy applications that take the most time to startup.
+2. readiness - Determines if a pod is ready to handle traffic. It ensures your application is ready before it starts serving the traffic to the user.
+3. liveness - Checks if the application inside a pod is running. It monitors the apps after a certain period of time and when the application fails or crashes, it restarts the application. 
