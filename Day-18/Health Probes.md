@@ -10,4 +10,30 @@
 2. readiness - Determines if a pod is ready to handle traffic. It ensures your application is ready before it starts serving the traffic to the user.
 3. liveness - Checks if the application inside a pod is running. It monitors the apps after a certain period of time and when the application fails or crashes, it restarts the application. 
 
-- With the help of HTTP/TCP command we can health check.
+- With the help of HTTP/TCP/command we can health check.
+
+- Sample YAML Files:
+**liveness probe**
+```  yaml
+  apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    test: liveness
+  name: liveness-exec
+spec:
+  containers:
+  - name: liveness
+    image: registry.k8s.io/busybox
+    args:
+    - /bin/sh
+    - -c
+    - touch /tmp/healthy; sleep 30; rm -f /tmp/healthy; sleep 600
+    livenessProbe:
+      exec:
+        command:
+        - cat 
+        - /tmp/healthy
+      initialDelaySeconds: 5
+      periodSeconds: 5
+```
