@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service    # kind of resource
+metadata:
+  name: myapp    # Service name
+  labels:
+    env: demo
+spec:
+  type: ClusterIP   # type of service ClusterIP
+  ports:
+    - protocol: TCP   
+      port: 80    # port on the service
+      targetPort: 80  # port on the pods targeted by the service
+  selector:
+    env: demo
