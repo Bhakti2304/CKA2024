@@ -13,9 +13,9 @@
 - **Vertical Pod Autoscaling (VPA)** automatically adjusts the CPU and memory requests/limits of your pods to ensure they have the right amount of resources.
 - It is stateless and also known as 'Scale up/down'.
 
+![HPA vs VPA](https://github.com/user-attachments/assets/681d3df7-3e19-4e9a-b470-c870f98af4c1)
+
 - **HPA** and **VPA** work based on metrics such as CPU, memory, disk, and so on.
 - In some cases, we have to autoscale infrastructure or workload in the production system based on certain events such as getting lots of errors on one of the servers or lots of requests getting rejected on a particular node, then we should use 3rd party tools such as KEDA and Cron/Schedule based autoscaling.
   
-
-![HPA vs VPA](https://github.com/user-attachments/assets/681d3df7-3e19-4e9a-b470-c870f98af4c1)
 
